@@ -246,6 +246,13 @@ namespace CommandTerminal
             AddCommand(name, info);
         }
 
+        public void RemoveCommand(string name)
+        {
+            name = name.ToUpper();
+            
+            commands.Remove(name);
+        }
+
         public void SetVariable(string name, string value) {
             SetVariable(name, new CommandArg() { String = value });
         }
